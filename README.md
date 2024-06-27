@@ -1,1 +1,1 @@
-# Blog_Applicatrion
+# Blog_Application  Database in SQLite . Simple Console Application
