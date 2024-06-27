@@ -19,8 +19,16 @@ namespace Blog_Applicatrion.Data
         }
 
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Tag>()
+                .HasOne(t => t.Blog)
+                .WithMany(b => b.Tags)
+                .HasForeignKey(t => t.BlogId);
+        }
     }
 
 
