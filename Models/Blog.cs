@@ -23,6 +23,7 @@ namespace Blog_Applicatrion.Models
 
         public Blog()
         {
+
         }
 
         public Blog(string title, string content, string tags)

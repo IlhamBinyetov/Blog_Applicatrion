@@ -24,6 +24,11 @@ namespace Blog_Applicatrion.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Blog>()
+             .HasMany(b => b.Tags)
+             .WithOne(t => t.Blog)
+             .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Tag>()
                 .HasOne(t => t.Blog)
                 .WithMany(b => b.Tags)

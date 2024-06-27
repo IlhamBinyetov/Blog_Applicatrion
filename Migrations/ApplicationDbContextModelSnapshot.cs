@@ -32,7 +32,7 @@ namespace Blog_Applicatrion.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("Blog_Applicatrion.Models.Tag", b =>
@@ -52,7 +52,7 @@ namespace Blog_Applicatrion.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Tags");
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("Blog_Applicatrion.Models.Tag", b =>
